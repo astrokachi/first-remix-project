@@ -62,7 +62,7 @@ export const meta = () => {
 
 export default function LoginPage() {
   const [searchParams] = useSearchParams();
-  const redirectTo = searchParams.get("redirectTo") || "/notes";
+  const redirectTo = searchParams.get("redirectTo") || "/";
   const actionData = useActionData();
   const emailRef = React.useRef(null);
   const passwordRef = React.useRef(null);
@@ -76,7 +76,7 @@ export default function LoginPage() {
   }, [actionData]);
 
   return (
-    <div className="flex min-h-full flex-col justify-center">
+    <div className="flex min-h-full flex-col justify-center h-screen">
       <div className="mx-auto w-full max-w-md px-8">
         <Form method="post" className="space-y-6">
           <div>
